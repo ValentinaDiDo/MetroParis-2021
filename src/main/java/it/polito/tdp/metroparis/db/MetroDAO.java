@@ -112,7 +112,8 @@ public class MetroDAO {
 			
 			List<Connessione> result = new ArrayList<Connessione>();
 			while(rs.next()) {
-				
+				//tutti questi for potevano essere evitati passando come paramentro la mappa delle fermate e fare un semplice
+				// mappa.get(id_fermata) per avere l'oggetto fermate
 				int id_partenza = rs.getInt("id_stazP") ;
 				Fermata fermata_partenza = null ;
 				for(Fermata f: fermate) 
